@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+    position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.menu-button {
+    position: relative;
+    z-index: 1;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: -22%;
+    width: 20%;
+    -webkit-box-shadow: 1px 1px 3px #888;
+    box-shadow: 1px 1px 3px #888;
+    background-color: #fff;
+    -webkit-transition: left 0.3s ease-in;
+    -o-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+}
+
+.nav.show {
+    left: 0;
+    background: linear-gradient(45deg, black -80%, #fff 100%)
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 10px;
+    z-index: 11;
+}
+
+.menu-items {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-link {
+    text-decoration: none;
+    padding: 10px 16px;
+    display: flex;
+    color: bisque;
+    border-bottom: 1px solid #555;
+}
+
+.menu-list:hover,
+.menu-list:active,
+.menu-list:focus {
+    background: linear-gradient(45deg, black, transparent);
 }
